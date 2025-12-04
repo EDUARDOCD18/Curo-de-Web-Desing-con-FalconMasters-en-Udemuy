@@ -6,16 +6,34 @@
     <title>Formularios</title>
   </head>
   <body>
-    <label for="nombre">Nombre: </label>
-    <input type="text" placeholder="Coloca tu nombre" id="nombre" />
-    <br />
-    <br />
-    <label for="comentario">Comentarios:</label>
-    <br />
-    <textarea
-      name=""
-      id="comentario"
-      placeholder="Deja tu comentario acá"
-    ></textarea>
+    <form action="" name="contacto" method="POST" id="contacto">
+      <label for="nombre">Nombre: </label>
+      <input type="text" placeholder="Coloca tu nombre" id="nombre" />
+      <br /><br />
+      <label for="comentario">Comentarios:</label>
+      <br />
+      <textarea
+        name=""
+        id="comentario"
+        placeholder="Deja tu comentario acá"
+      ></textarea>
+      <br /><br />
+      <label for="pais">Selecciona tu país</label>
+      <select name="pais" id="pais">
+        <option value="col">Colombia</option>
+        <option value="ven">Venezuela</option>
+        <option value="mex">México</option>
+      </select>
+      <br /><br />
+      <input type="radio" name="idioma" id="espanol" value="español" />
+      <label for="espanol">Español</label>
+      <input type="radio" name="idioma" id="ingles" value="ingles" />
+      <label for="ingles">Inglés</label>
+      <br /><br />
+      <input type="checkbox" name="terminos" id="terminos" />
+      <label for="terminos">Términos y condiciones</label>
+      <br /><br />
+      <input type="submit" value="Enviar los datos" />
+    </form>
   </body>
 </html>
