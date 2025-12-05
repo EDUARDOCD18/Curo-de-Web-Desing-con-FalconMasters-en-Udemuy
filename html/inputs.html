@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+  </head>
+  <body>
+    <form action="">
+      <!-- Email -->
+      <label for="correo">Correo:</label>
+      <input
+        type="email"
+        name="correo"
+        id="correo"
+        placeholder="correo@correo.com"
+        required
+      />
+      <br />
+      <hr />
+      <!-- Password -->
+      <label for="password">Constraseña:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        minlength="8"
+        placeholder="Ingresa tu contraseña"
+      />
+      <br />
+      <hr />
+      <!-- Number -->
+      <label for="numero">Selecciona número</label>
+      <input
+        type="number"
+        name="numero"
+        id="numero"
+        min="1"
+        max="5"
+        placeholder="1"
+      />
+      <br />
+      <hr />
+      <!-- File -->
+      <label for="filr">Archivo:</label>
+      <input
+        type="file"
+        name="file"
+        id="file"
+        accept=".png, .pdf, .jpeg"
+        multiple
+      />
+      <br />
+      <hr />
+      <!-- Range -->
+      <label for="range">Rango:</label>
+      <input type="range" name="range" id="range" min="1" max="10" value="9" />
+      <br />
+      <hr />
+      <!-- Color -->
+      <label for="range">Color:</label>
+      <input type="color" name="color" id="color" />
+      <br />
+      <hr />
+      <!-- date -->
+      <label for="date">Fecha:</label>
+      <input
+        type="date"
+        name="date"
+        id="date"
+        value="1999-06-18"
+        min="1900-01-01"
+        max="1999-12-31"
+      />
+      <br />
+      <hr />
+      <label for="date">Tiempo local:</label>
+      <input
+        type="datetime-local"
+        name="date_local"
+        id="date_local"
+        value="1999-06-18"
+        min="1900-01-01"
+        max="1999-12-31"
+      />
+      <br />
+      <hr />
+      <label for="time">Fecha:</label>
+      <input type="time" name="time" id="time" />
+      <br />
+      <hr />
+      <!-- Hidden -->
+      <label for="hidden">Hidden:</label>
+      <input type="hidden" name="hidden" id="hidden" />
+      <br />
+      <hr />
+      <!-- Image -->
+      <label for="image">Imagen:</label>
+      <input
+        type="image"
+        name="image"
+        id="image"
+        src="../img/pau-gomez-zg8K5s3ZXM0-unsplash.jpg"
+        width="100"
+      />
+      <br />
+      <hr />
+      <!-- Limpiar -->
+      <label for="reset">Limpiar el formulario:</label>
+      <input type="reset" name="reset" id="reset" />
+      <br />
+      <hr />
+      <button type="submit">Enviar</button>
+      <br />
+      <hr />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
