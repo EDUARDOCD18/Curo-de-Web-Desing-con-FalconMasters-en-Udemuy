@@ -27,7 +27,23 @@ main p {
   color: rgb(213, 230, 69);
 }
 
-main p a{
-    color: aqua;
-    font-size: 26px;
+main p a {
+  color: aqua;
+  font-size: 26px;
+}
+
+/* SELECTOR DE CLASES */
+.enlace {
+  text-decoration: none;
+  color: rgb(206, 57, 57);
+  text-transform: uppercase;
+}
+
+header .enlace {
+  font-size: 22px;
+}
+
+/* SELECTOR DE ID */
+.inicio {
+  color: rgb(255, 176, 5);
 }
