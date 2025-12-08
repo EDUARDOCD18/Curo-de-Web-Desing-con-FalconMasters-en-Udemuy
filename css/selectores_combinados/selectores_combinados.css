@@ -1,0 +1,23 @@
+.menu {
+  background: lightgray;
+}
+
+.menu a {
+  color: red;
+}
+
+/* SELECTOR DE HIJOS */
+.menu > a {
+  font-size: 24px;
+}
+
+/* SELECTOR DE HERMANOS */
+h3 + p {
+  color: blue;
+  font-size: 22px;
+}
+
+/* SELECTOR GENERAL */
+h3 ~ p {
+  text-transform: uppercase;
+}
