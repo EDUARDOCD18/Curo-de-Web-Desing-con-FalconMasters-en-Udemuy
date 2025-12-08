@@ -1,0 +1,33 @@
+/* Selector universal */
+/* * {
+  color: blue;
+} */
+
+/* Selectores simples */
+/* h1{
+    text-transform: uppercase;
+    color: blue;
+}
+
+h2{
+    text-transform: uppercase;
+    color: red;
+} */
+
+/* Selectores de grupo */
+h1,
+h2 {
+  color: aqua;
+  text-transform: uppercase;
+}
+
+/* SELECTOR DESCENDENTE */
+main p {
+  font-size: 20px;
+  color: rgb(213, 230, 69);
+}
+
+main p a{
+    color: aqua;
+    font-size: 26px;
+}
