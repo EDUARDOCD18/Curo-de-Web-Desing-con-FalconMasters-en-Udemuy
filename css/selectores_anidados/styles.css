@@ -1,0 +1,62 @@
+/* EJEMPLO DE CÓDIGO SIN ANIDAR */
+
+/* .contenedor .articulo {
+  background: lightsalmon;
+}
+
+.contenedor .articulo h2 {
+  font-size: 40px;
+}
+
+.contenedor .articulo p {
+  font-size: 20px;
+}
+
+.contenedor .articulo a {
+  font-size: 20px;
+  color: red;
+}
+
+.contenedor .articulo.destacado {
+  background: lightblue;
+}
+
+.contenedor .articulo.articulo.destacado h2 {
+  color: blue;
+}
+ */
+
+/* Nota: esta manera duplica muchas partes de código CSS. Es el método antigüo para escribir hojas de estilos. */
+
+/* =========================== */
+/* =========================== */
+
+/* EJEMPLOS CON ANIDACIÓN */
+
+.contenedor {
+  background-color: rgb(45, 202, 45);
+
+  .articulo {
+    &.destacado {
+      background: lime;
+      h2 {
+        color: rgb(250, 100, 100);
+      }
+    }
+
+    background-color: lightgray;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 20px;
+      color: red;
+    }
+  }
+}
