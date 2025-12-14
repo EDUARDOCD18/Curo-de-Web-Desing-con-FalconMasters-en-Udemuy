@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+html{
+    font-size: 20px;
+}
+
+.caja {
+  background: rgba(68, 142, 166);
+  height: 50vh;
+  width: 50vw;
+  font-size: 40px;
+
+  .parrafo--1 {
+    background: lightblue;
+    width: 50%;
+    height: 70%;
+    font-size: 2rem;
+  }
+}
