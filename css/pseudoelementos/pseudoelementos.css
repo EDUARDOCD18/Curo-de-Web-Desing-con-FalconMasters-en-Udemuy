@@ -1,0 +1,57 @@
+p {
+  &::first-letter {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  &::first-line {
+    background: #c9a9cf;
+    font-size: 18px;
+    line-height: 50px;
+  }
+}
+
+* {
+  &::selection {
+    background: red;
+    color: white;
+  }
+}
+
+.caja {
+  background: #f9a03f;
+  height: 150px;
+  width: 150px;
+
+  &::before {
+    content: "Contenido antes de la caja. ";
+    display: block;
+    background: #000;
+    color: white;
+  }
+
+  &::after {
+    content: "Contenido después de la caja. ";
+    display: block;
+    background: #000;
+    color: white;
+  }
+}
+
+.lista {
+  li {
+    &::marker {
+      content: "♥";
+      font-size: 22px;
+      color: red;
+    }
+  }
+}
+
+input{
+    &::placeholder{
+        color: orange;
+        font-weight: bold;
+    }
+}
