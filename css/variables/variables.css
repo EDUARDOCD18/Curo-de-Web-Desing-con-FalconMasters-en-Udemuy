@@ -1,0 +1,28 @@
+/* Variables en CSS */
+
+:root {
+  --color-primario: rgb(0, 255, 64);
+  --color-secundario: rgb(197, 95, 228);
+  --fuente-primaria: "Arial", sans-serif;
+  --fuente-secundario: "Times New Roman", serif;
+}
+
+h1 {
+  color: var(--color-primario);
+  font-family: var(--fuente-primaria);
+}
+
+header nav a {
+  color: var(--color-primario);
+}
+
+main {
+  a {
+    color: var(--color-primario);
+    font-family: var(--fuente-secundario);
+  }
+
+  p {
+    color: var(--color-secundario);
+  }
+}
