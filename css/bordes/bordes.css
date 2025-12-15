@@ -1,0 +1,65 @@
+body {
+  background: #f2f2f2;
+}
+
+p {
+  padding: 40px;
+  margin: 40px;
+  background: #fff;
+
+  &.solid {
+    border: solid 10px #000;
+  }
+
+  &.dotted {
+    border: dotted 10px #000;
+  }
+
+  &.dashed {
+    border: dashed 10px #000;
+  }
+
+  &.double {
+    border: double 10px #000;
+  }
+
+  &.groove {
+    border: groove 30px #ff0808;
+  }
+
+  &.ridge {
+    border: ridge 30px #ff0808;
+  }
+
+  &.inset {
+    border: inset 30px #6891dd;
+  }
+
+  &.outset {
+    border: outset 30px #6891dd;
+  }
+
+  &.none {
+    border: none;
+  }
+
+  &.transparent {
+    border: transparent 10px solid;
+
+    &:hover {
+      border: solid 10px #6891dd;
+    }
+  }
+
+  &.multi-borde {
+    border-top: 20px solid orange;
+    border-bottom: 20px outset rgb(34, 133, 9);
+    border-right: 20px dashed rgb(201, 107, 20);
+    border-left: 20px groove rgb(195, 20, 201);
+  }
+
+  &.radius{
+    border: 10px solid red;
+    border-radius: 20px;
+  }
+}
