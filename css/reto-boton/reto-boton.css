@@ -1,0 +1,106 @@
+body {
+  background: #fffcfc;
+}
+
+.contenedor {
+  background-color: #ee9b00;
+  display: inline-block;
+  padding: 30px;
+  width: 70%;
+}
+
+.boton {
+  font-family: "Roboto";
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.cuadrado {
+  background: #4900a8;
+  color: white;
+}
+
+.redondo {
+  background: #ee9b00;
+  color: white;
+  border-radius: 30px;
+}
+
+.outline {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: solid 1px #000;
+
+  &:hover {
+    background: #000000;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.gradiente {
+  color: white;
+  background: #020024;
+  background: linear-gradient(
+    311deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  &:hover {
+    background: #020024;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    color: rgb(255, 255, 255);
+  }
+}
+
+.sombra {
+  border-radius: 0;
+  color: white;
+  background: #047918;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 0 0 #024b0e;
+
+  &:hover {
+    box-shadow: 2px 2px 0 0 #024b0e;
+  }
+}
+
+.icono {
+  border-radius: 6px;
+  background: #c39d22;
+  background: linear-gradient(
+    155deg,
+    rgba(195, 157, 34, 1) 0%,
+    rgba(255, 235, 189, 1) 100%
+  );
+
+  &:hover {
+    background: linear-gradient(
+      300deg,
+      rgba(195, 157, 34, 1) 0%,
+      rgba(255, 235, 189, 1) 100%
+    );
+  }
+}
+
+.enlace {
+  a {
+    text-decoration: none;
+  }
+
+  background: transparent;
+  border: transparent;
+
+  &:hover {
+    background: #d4d3d3;
+  }
+}
