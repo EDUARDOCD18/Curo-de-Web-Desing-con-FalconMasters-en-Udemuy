@@ -1,0 +1,29 @@
+.caja {
+  font-size: 20px;
+  background: #65a665;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+  padding: 30px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.inline-block {
+  display: inline-block;
+  padding: 30px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  vertical-align: top;
+}
+
+.none{
+    display: none;
+}
