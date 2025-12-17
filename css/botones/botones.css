@@ -8,7 +8,7 @@ body {
   padding: 20px 0;
 }
 
-button {
+button, a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -83,13 +83,44 @@ button {
   }
 }
 .boton-5 {
-    background: #077307;
-    color: white;
-    box-shadow: 5px 5px #055805;
+  background: #077307;
+  color: white;
+  box-shadow: 5px 5px #055805;
 
-    &:hover{
-        box-shadow: 2px 2px #055805;
-    }
+  &:hover {
+    box-shadow: 2px 2px #055805;
+  }
 }
 .boton-6 {
+  border-radius: 3px;
+  border: 1px solid #8f8f26;
+  background: #c39d22;
+  background: linear-gradient(
+    155deg,
+    rgba(195, 157, 34, 1) 0%,
+    rgba(255, 235, 189, 1) 100%
+  );
+
+  &:hover {
+    background: linear-gradient(
+      370deg,
+      rgba(195, 157, 34, 1) 0%,
+      rgba(255, 235, 189, 1) 100%
+    );
+  }
+
+  svg {
+    margin-right: 5px;
+    height: 12px;
+  }
+}
+
+.boton-7{
+    color: #5839ac;
+    text-decoration: none;
+    border-radius: 3px;
+
+    &:hover{
+        background: #d4d0df;
+    }
 }
