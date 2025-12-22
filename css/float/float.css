@@ -1,0 +1,33 @@
+.body {
+  background: #64ced6;
+}
+
+.contenedor {
+  background: rgb(231, 133, 133);
+  padding: 20px;
+  margin: 20px;
+
+  .imagen {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .caja {
+    background: #000;
+    color: rgb(125, 233, 98);
+    padding: 20px;
+    margin: 5px;
+
+    &:nth-child(1) {
+      float: left;
+    }
+    &:nth-child(2) {
+      float: right;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}
