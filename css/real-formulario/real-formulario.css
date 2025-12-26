@@ -56,17 +56,75 @@ main {
     }
   }
 
-  label{
+  label {
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 14px;
 
-    .leyenda{
-        font-size: 12px;
-        font-style: italic;
-        color: #acacac;
-        font-weight: normal;
+    .leyenda {
+      font-size: 12px;
+      font-style: italic;
+      color: #acacac;
+      font-weight: normal;
+    }
+  }
+
+  .radio {
+    display: inline-block;
+    background: #f3edfd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    input {
+      width: auto;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:checked + span {
+        color: #6320ee;
+      }
+    }
+
+    &:hover {
+      background: #e5d9fc;
+      input {
+        outline: none;
+      }
+    }
+  }
+
+  textarea {
+    height: 200px;
+    min-height: 200px;
+    max-height: 300px;
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    display: inline-block;
+    background: #6320ee;
+    border: none;
+    padding: 10px 35px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      background: #7c41f1;
+    }
+  }
+
+  [data-invalid] {
+    label {
+      color: red;
+    }
+    input {
+      outline: 2px solid red;
+      color: red;
     }
   }
 }
