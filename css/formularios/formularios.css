@@ -35,3 +35,31 @@
     cursor: default;
   }
 }
+
+button {
+  padding: 10px;
+  display: inline-block;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &[type="submit"] {
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+input[type="radio"] {
+  &:checked + label {
+    color: blue;
+    font-weight: bold;
+  }
+
+  &:indeterminate + label {
+    color: red;
+  }
+}
