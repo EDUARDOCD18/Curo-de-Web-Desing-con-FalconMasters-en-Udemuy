@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="real-formulario.css" />
+    <title>Ejemplo de formulario con CSS</title>
+  </head>
+  <body>
+    <main>
+      <div class="mensaje">
+        <h1>Hola!</h1>
+        <p>
+          Mándamen un mensaje y en la brevedad posible me contactaré contigo.
+        </p>
+
+        <!-- Ejemplo de formulario -->
+        <form action="" class="formulario">
+          <!-- Grupo para el campo de nombre -->
+          <div class="grupo">
+            <label for="nombre"
+              >Nombre: <span class="leyenda">(Obligatorio)</span></label
+            >
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="John Doe"
+            />
+          </div>
+
+          <!-- Grupo para el campo de correo -->
+          <div class="grupo">
+            <label for="correo"
+              >Correo: <span class="leyenda">(Obligatorio)</span></label
+            >
+            <input
+              type="email"
+              name="correo"
+              id="correo"
+              placeholder="correo@correo.com"
+            />
+          </div>
+
+          <!-- Grupo para el select de país -->
+          <div class="grupo">
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+              <option value="default" selected disabled>
+                -- Escoger país --
+              </option>
+              <option value="venezuela">Venezuela</option>
+              <option value="belgica">Bélgica</option>
+              <option value="panama">Panamá</option>
+            </select>
+          </div>
+
+          <!-- grupo para los radio buttons -->
+          <div class="grupo">
+            <label for="">Asunto:</label>
+            <label for="opcion1" class="radio">
+              <input
+                type="radio"
+                name="opcion"
+                id="opcion1"
+                value="informacion"
+              />
+              <span>Solicito información</span>
+            </label>
+
+            <label for="opcion2" class="radio">
+              <input
+                type="radio"
+                name="opcion"
+                id="opcion2"
+                value="contratacion"
+              />
+              <span>Me gustaría contratarte</span>
+            </label>
+
+            <label for="opcion3" class="radio">
+              <input type="radio" name="opcion" id="opcion3" value="otro" />
+              <span>Otro asunto</span>
+            </label>
+          </div>
+
+          <!-- grupo para el textarea -->
+          <div class="grupo">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              placeholder="Déjame un mensaje"
+            ></textarea>
+          </div>
+
+          <!-- grupo para el check de suscripción -->
+          <div class="grupo">
+            <label for="terminos" class="radio">
+              <input
+                type="checkbox"
+                name="terminos"
+                id="terminos"
+                value="terminos"
+              />
+              <span>Suscribirse a la lista de correos promocionales</span>
+            </label>
+          </div>
+
+          <!-- botón para cargar el formulario -->
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
