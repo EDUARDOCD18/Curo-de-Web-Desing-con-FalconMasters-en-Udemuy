@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.caja {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  font-size: 24px;
+  background: #728ef1;
+  border-radius: 5px;
+  margin: 20px;
+  vertical-align: top;
+
+  &.padding {
+    padding: 20px;
+  }
+
+  &.borde {
+    border: 10px solid #1f114e;
+  }
+}
