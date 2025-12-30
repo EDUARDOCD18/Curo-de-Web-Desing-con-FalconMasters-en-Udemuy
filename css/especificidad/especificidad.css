@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* h3{
+    color: red;
+    font-size: 30px;
+}
+
+.titulo{
+    color: blue;
+}
+
+#titulo-1{
+    font-size: 60px;
+    color: green;
+} */
+
+/* Ejemplo 2 */
+/* main section article h3 {
+  color: red;
+}
+
+.titulo {
+  color: blanchedalmond;
+}
+ */
+
+/* Ejemplo 3 */
+.blog .post .titulo {
+  color: rgb(0, 255, 200);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background: #2e2e2e;
+  }
+
+  .blog .titulo {
+    color: rgb(98, 0, 255) !important;
+  }
+}
