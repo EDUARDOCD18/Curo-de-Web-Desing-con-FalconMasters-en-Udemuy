@@ -37,18 +37,42 @@ body {
   gap: 4rem;
 
   /* Dirección de las caja */
-  /* 
+  /*
   - row (valor por defecto)
   - row-reverse
-  - column 
-  - column-reverse 
+  - column
+  - column-reverse
   */
-  flex-direction: row;
+  /* flex-direction: column; */
+  /* height: 90vh; */
 
   /* Elementos que se salgan de la caja
   nowrap (valor por defecto)
   - wrap
   - wrap-reverse
   */
+  /* flex-wrap: wrap; */
+
+  /* Justifican contenido
+  - start (valor por defecto)
+  - end
+  - center
+  -space-beetween
+  -space-around
+  -space-evenly
+  */
+  /* justify-content: space-between; */
+
+  /* Alineado de los elemenos
+  - stretch (valor por defecto)
+  - start
+  - center
+  - end
+  */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+
+  /* align-content: space-between; */
   flex-wrap: wrap;
 }
