@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/* Esta hoja contiene los estilos básicos para esta lección de CSS GRID */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor--principal {
+  width: 100%;
+  max-width: 80rem;
+  margin-top: 4rem;
+}
+
+.grid {
+  border: 0.2rem solid black;
+}
+
+.caja {
+  background: white;
+  border: 0.1rem solid black;
+  padding: 4rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
