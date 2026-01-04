@@ -33,9 +33,9 @@ body {
   border: 0.4rem solid #000;
   padding: 4rem;
   gap: 4rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
-
+/*
 .basis {
   flex-direction: column;
 
@@ -46,15 +46,25 @@ body {
   .especial {
     flex-basis: 300px;
   }
-}
+} */
 
 .grow {
   .caja {
-    /* flex-grow: 1; */
+    flex-grow: 1;
     flex-basis: 200px;
   }
 
   .especial {
     flex-grow: 3;
+  }
+}
+
+.basis {
+  .caja {
+    flex: 1 1 400px;
+  }
+
+  .especial {
+    flex-shrink: 5;
   }
 }
