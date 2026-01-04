@@ -68,3 +68,21 @@ body {
     flex-shrink: 5;
   }
 }
+
+.order {
+  .uno {
+    order: 4;
+  }
+
+  .dos {
+    order: 3;
+  }
+
+  .tres {
+    order: 2;
+  }
+
+  .cuatro {
+    order: 1;
+  }
+}
