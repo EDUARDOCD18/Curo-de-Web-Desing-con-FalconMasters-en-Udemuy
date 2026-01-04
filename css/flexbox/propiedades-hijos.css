@@ -86,3 +86,24 @@ body {
     order: 1;
   }
 }
+
+.align-self {
+  height: 70rem;
+  align-items: start;
+
+  .uno {
+    align-self: stretch;
+  }
+
+  .dos {
+    align-self: start;
+  }
+
+  .tres {
+    align-self: center;
+  }
+
+  .cuatro {
+    align-self: end;
+  }
+}
