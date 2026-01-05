@@ -1,0 +1,8 @@
+.grid {
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  grid-template-columns: minmax(20rem, 1fr) 10rem 10rem;
+  height: 90vh;
+  grid-template-rows: 20rem minmax(20rem, 50rem);
+}
