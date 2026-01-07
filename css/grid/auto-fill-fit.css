@@ -1,0 +1,14 @@
+body {
+  background: #f2f2f2;
+}
+
+.contenedor--principal{
+    max-width: none;
+}
+
+.grid {
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
