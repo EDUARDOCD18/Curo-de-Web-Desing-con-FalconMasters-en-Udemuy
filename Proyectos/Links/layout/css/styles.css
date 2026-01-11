@@ -16,5 +16,38 @@ html {
 }
 
 body {
-  background: #f2f2f2; 
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  background: #ccc;
+  width: 90%;
+  max-width: 100rem;
+  margin: 2rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  min-height: 90vh;
+}
+
+.header {
+  grid-column: 1/-1;
+}
+
+.main {
+  grid-column: 1 / span 2;
+}
+
+.widgets {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer {
+  grid-column: 1/-1;
 }
