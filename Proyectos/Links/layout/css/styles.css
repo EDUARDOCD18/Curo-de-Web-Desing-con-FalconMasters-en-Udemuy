@@ -2,9 +2,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.6rem;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 *,
@@ -17,31 +15,35 @@ html {
 
 body {
   background: #f2f2f2;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
 }
 
 .grid {
-  display: grid;
-  background: #ccc;
   width: 90%;
   max-width: 100rem;
   margin: 2rem 0;
+  display: grid;
+  /* 3 columnas iguales */
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 1fr auto;
+  /* Cambiamos 1fr por auto para que las filas no se estiren solas */
+  grid-template-rows: auto auto auto auto;
   gap: 2rem;
-  min-height: 90vh;
+  /* Alineamos el contenido al inicio para evitar huecos verticales */
+  align-content: start;
 
   .header {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 2rem 0; /* Ajustado para que pegue a los bordes laterales si es necesario */
     align-items: center;
 
     .logo {
       font-size: 5rem;
+      font-weight: 700;
     }
 
     .nav {
@@ -52,22 +54,78 @@ body {
         text-decoration: none;
         color: #531cb3;
         font-size: 2rem;
+        font-weight: 500;
       }
     }
   }
 
   .main {
     grid-column: 1 / span 2;
+    background: white;
+    padding: 4rem; /* Más padding para que se vea como en el ejemplo */
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 1.2rem 2.5rem;
+      background: #3f19a0;
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #2d1275;
+      }
+    }
+  }
+
+  .aside {
+    /* El Aside */
+    background: #000;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
   }
 
   .widgets {
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    /* En la imagen del instructor, los widgets van debajo del Main */
+    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
   }
 
   .footer {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+
+    p {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    span {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
   }
 }
