@@ -31,23 +31,43 @@ body {
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
   min-height: 90vh;
-}
 
-.header {
-  grid-column: 1/-1;
-}
+  .header {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
 
-.main {
-  grid-column: 1 / span 2;
-}
+    .logo {
+      font-size: 5rem;
+    }
 
-.widgets {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
+    .nav {
+      display: flex;
+      gap: 2rem;
 
-.footer {
-  grid-column: 1/-1;
+      a {
+        text-decoration: none;
+        color: #531cb3;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .main {
+    grid-column: 1 / span 2;
+  }
+
+  .widgets {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer {
+    grid-column: 1/-1;
+  }
 }
