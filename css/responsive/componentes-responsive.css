@@ -27,12 +27,12 @@ body {
     background: white;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
+  }
 
-    .imagen {
-      width: 100%;
-      max-height: 25rem;
-      object-fit: cover;
-    }
+  .imagen {
+    width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
   }
 
   .textos {
@@ -55,8 +55,31 @@ body {
       display: inline-block;
       padding: 1rem 3rem;
       font-size: 2rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      .textos {
+        padding: 1rem;
+
+        .titulo {
+          font-size: 2rem;
+          margin: 0.5rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+
+        .boton {
+          padding: 0.5rem 1.5rem;
+          font-size: 1.4rem;
+        }
+      }
     }
   }
 }
