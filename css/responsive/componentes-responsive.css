@@ -18,7 +18,9 @@ body {
   justify-content: center;
 }
 
-.contenedor {
+/* -- FORMA 1 -- */
+
+/* .contenedor {
   width: 90vw;
   max-width: 50rem;
   margin: 4rem 0;
@@ -81,5 +83,58 @@ body {
         }
       }
     }
+  }
+} */
+
+/* -- FORMA 2 -- */
+
+.contenedor {
+  width: 90vw;
+  max-width: 50rem;
+  margin: 4rem 0;
+
+  .card {
+    background: white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    font-size: 16px;
+
+    .imagen {
+      width: 100%;
+      max-height: 15.62em;
+      object-fit: cover;
+    }
+
+    .textos {
+      padding: 1.25em;
+
+      .titulo {
+        font-size: 1.875em;
+        margin-bottom: 0.62em;
+      }
+
+      p {
+        font-size: 1.25em;
+        margin-bottom: 1.32em;
+      }
+
+      .boton {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.625em 1.875em;
+        font-size: 1.25em;
+        border-radius: 0.3125em;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    font-size: 10px;
+    color: red;
   }
 }
