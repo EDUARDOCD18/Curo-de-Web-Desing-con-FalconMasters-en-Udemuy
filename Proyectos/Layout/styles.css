@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 90%;
+  max-width: 100rem;
+  margin: 2rem 0;
+  display: grid;
+  /* 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
+  /* Cambiamos 1fr por auto para que las filas no se estiren solas */
+  grid-template-rows: auto auto auto auto;
+  gap: clamp(1rem, 3vw, 2rem);
+  /* Alineamos el contenido al inicio para evitar huecos verticales */
+  align-content: start;
+
+  .header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0; /* Ajustado para que pegue a los bordes laterales si es necesario */
+    align-items: center;
+
+    .logo {
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      gap: clamp(1rem, 3vw, 2rem);
+
+      a {
+        text-decoration: none;
+        color: #531cb3;
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        font-weight: 500;
+      }
+
+      @media (max-width: 500px) {
+        & {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .titulo {
+    font-size: 3.4rem;
+  }
+
+  .main {
+    grid-column: 1 / span 2;
+    background: white;
+    padding: 4rem; /* Más padding para que se vea como en el ejemplo */
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: flex-start;
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 1.2rem 2.5rem;
+      background: #3f19a0;
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #2d1275;
+      }
+    }
+    @media (max-width: 750px) {
+      & {
+        grid-column: 1 / -1;
+        align-items: stretch;
+
+        .boton {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .aside {
+    /* El Aside */
+    background: #000;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+
+    @media (max-width: 750px) {
+      & {
+        grid-column: 1/-1;
+        min-height: 20rem;
+      }
+    }
+  }
+
+  .widgets {
+    /* En la imagen del instructor, los widgets van debajo del Main */
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+
+    .widget {
+      background: #ccc;
+      min-height: 10rem;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .footer {
+    grid-column: 1/-1;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #929292;
+  }
+}
