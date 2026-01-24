@@ -1,0 +1,47 @@
+.contenedor__header {
+  width: 90%;
+  max-width: 120rem;
+  margin: auto;
+}
+
+.header {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  .header__logo {
+    display: inline-block;
+    background: var(--azul-secundario);
+    padding: 2rem;
+    width: auto;
+    height: 7rem;
+    border-radius: 1rem 0 0 0;
+    position: relative;
+
+    img {
+      height: 100%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      background: var(--azul-secundario);
+      height: 2rem;
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-top: 7rem solid transparent;
+      border-right: 7rem solid transparent;
+      border-bottom: 7rem solid var(--azul-secundario);
+      right: -6.9rem;
+      top: -6.95rem;
+    }
+  }
+}
