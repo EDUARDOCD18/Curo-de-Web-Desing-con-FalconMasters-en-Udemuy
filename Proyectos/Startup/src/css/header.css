@@ -59,18 +59,8 @@
       font-weight: 700;
       border: 0.5rem;
 
-      &.boton{
+      &.boton {
         font-weight: 500;
-      }
-    }
-
-    .descargar__icono {
-      width: 1.8rem;
-      height: 1.8rem;
-
-      svg {
-        width: 100%;
-        height: 100%;
       }
     }
   }
