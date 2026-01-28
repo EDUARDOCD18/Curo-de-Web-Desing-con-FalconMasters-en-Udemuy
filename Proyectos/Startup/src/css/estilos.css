@@ -28,7 +28,6 @@ a {
 }
 
 /* Estilos para los botones */
-
 .boton {
   display: inline-flex;
   padding: 1rem 1.5rem;
@@ -56,4 +55,20 @@ a {
       background: var(--azul-primario-hover);
     }
   }
+}
+
+/* Estilos para el contenedor */
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: auto;
+}
+
+/* Estilos generales para los títulos */
+.titulo {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--azul-secundario);
+  margin-bottom: 4rem;
+  text-align: center;
 }
