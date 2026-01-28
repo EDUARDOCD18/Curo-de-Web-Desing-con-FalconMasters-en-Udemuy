@@ -35,5 +35,53 @@
         }
       }
     }
+
+    /* Estilos para los tabs generales*/
+    .tabs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      /* Estilos para el tab individual */
+      .tab {
+        background: #fff;
+        border-radius: 0.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        cursor: pointer;
+        overflow: hidden;
+
+        /* Estilos para la tab activa */
+        &.active {
+          background: var(--azul-primario);
+          color: white;
+
+          .icono {
+            color: white;
+          }
+        }
+
+        /* Estilos para el ícono de la flecha */
+        .icono {
+          display: flex;
+          align-items: center;
+          padding-left: 2rem;
+          color: var(--azul-primario);
+
+          svg {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        /* Estilos para info */
+        .info {
+          padding: 2rem;
+          display: flex;
+          gap: 1rem;
+          flex-direction: column;
+        }
+      }
+    }
   }
 }
