@@ -1,0 +1,80 @@
+/* -- Estilos para los precios -- */
+.precios {
+  margin-bottom: 10rem;
+
+  /* Estilos para la grilla de precios */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    /* Estilos para el plan */
+    .plan {
+      background: #fff;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      border: 1px solid transparent;
+      transition: 0.3s ease all;
+
+      &:hover {
+        border: 1px solid var(--azul-primario);
+      }
+
+      /* nombre del plan */
+      .nombre {
+        font-size: 3.2rem;
+        font-family: 700;
+      }
+
+      /* precio del plan */
+      .precio {
+        font-weight: 700;
+        font-size: 3.2rem;
+
+        span {
+          font-weight: 300;
+          color: #7c7272;
+          font-size: 1.6rem;
+        }
+      }
+
+      /* descripción del plan */
+      .descripcion {
+        line-height: 150%;
+      }
+
+      /* lsita del plan */
+      .lista {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .icono {
+            display: flex;
+            align-items: center;
+            color: var(--azul-primario);
+          }
+        }
+      }
+
+      /* plan destacado o seleccionado */
+      &.destacado {
+        background-color: var(--azul-secundario);
+        color: #fff;
+
+        .precio span {
+          color: rgba(255, 255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+}
