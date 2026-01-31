@@ -1,4 +1,4 @@
-/* Estilos para el hero */
+/* -- Estilos para el hero -- */
 .hero {
   background: #1fbb8c;
   background: linear-gradient(
@@ -185,6 +185,57 @@
         width: 100%;
         vertical-align: top;
         aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      gap: 2rem;
+
+      .hero__col-1 {
+        order: 2;
+        text-align: center;
+        gap: 2rem;
+
+        .titulo {
+          text-align: center;
+          font-size: 3rem;
+        }
+
+        .botones {
+          justify-content: center;
+        }
+
+        .estadisticas {
+          flex-direction: column;
+          gap: 2rem;
+          justify-content: center;
+          font-size: 1.8rem;
+
+          p{
+            gap: 1rem;
+
+            &:nth-child(1){
+              padding-right: 0;
+              border-right: none;
+            }
+          }
+        }
+      }
+
+      .hero__col-2 {
+        order: 1;
+        display: flex;
+        justify-content: center;
+
+        .slideshow {
+          position: relative;
+          width: 70%;
+        }
       }
     }
   }
