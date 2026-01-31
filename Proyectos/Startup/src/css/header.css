@@ -2,6 +2,13 @@
   width: 90%;
   max-width: 120rem;
   margin: auto;
+
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+      max-width: none;
+    }
+  }
 }
 
 .header {
@@ -40,8 +47,8 @@
       border-top: 7rem solid transparent;
       border-right: 7rem solid transparent;
       border-bottom: 7rem solid var(--azul-secundario);
-      right: -6.90rem;
-      top: -6.80rem;
+      right: -6.9rem;
+      top: -6.8rem;
     }
   }
 
@@ -61,6 +68,32 @@
 
       &.boton {
         font-weight: 500;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .header__logo {
+        border-radius: 0.5rem;
+        height: 6rem;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .header__navbar{
+        margin-bottom: 2rem;
+        padding: 1rem;
       }
     }
   }
