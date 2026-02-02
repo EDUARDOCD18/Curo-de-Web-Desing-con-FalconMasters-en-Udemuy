@@ -84,4 +84,38 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    & {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+
+      .grid {
+        .tabs {
+          .tab {
+            .icono {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    & {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+
+        .tabs {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .previews{
+          height: 40rem;
+        }
+      }
+    }
+  }
 }
