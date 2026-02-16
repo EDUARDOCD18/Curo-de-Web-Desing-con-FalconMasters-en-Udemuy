@@ -37,9 +37,35 @@ console.log(resultado);
 console.log(frutarMayusculas); */
 
 /* .filter() */
-const frutasCuatroLetras = frutas.filter((nombre) => {
+/* const frutasCuatroLetras = frutas.filter((nombre) => {
   if (nombre.length === 5) {
     return nombre;
   }
 });
 console.log(frutasCuatroLetras);
+ */
+
+/* .includes() */
+// console.log(frutas.includes("Manzana"));
+
+/* .every */
+/* const frutasValidas = frutas.every((fruta) => {
+  if (typeof fruta === "string") {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(frutasValidas); */
+
+/* .some() */
+const frutasValidas = frutas.some((fruta) => {
+  if (typeof fruta !== "string") {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(frutasValidas);
