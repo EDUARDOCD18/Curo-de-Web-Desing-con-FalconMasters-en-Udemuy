@@ -22,10 +22,24 @@ console.log(frutas.indexOf("kiwi")); */
 }); */
 
 /* .find() */
-const resultado = frutas.find((frutas) => {
+/* const resultado = frutas.find((frutas) => {
   if (frutas[0] === "M") {
     return frutas;
   }
 });
 
 console.log(resultado);
+ */
+
+/* .map() */
+/* const frutarMayusculas = frutas.map((frutas) => frutas.toUpperCase());
+
+console.log(frutarMayusculas); */
+
+/* .filter() */
+const frutasCuatroLetras = frutas.filter((nombre) => {
+  if (nombre.length === 5) {
+    return nombre;
+  }
+});
+console.log(frutasCuatroLetras);
