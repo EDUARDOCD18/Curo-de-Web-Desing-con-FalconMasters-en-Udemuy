@@ -1,5 +1,5 @@
 /* getElementByUd */
-const elemento = document.getElementById("contenedor1")
+const elemento = document.getElementById("contenedor1");
 // console.log(elemento);
 
 /* .children */
@@ -16,5 +16,22 @@ const elemento = document.getElementById("contenedor1")
 
 /* -- getElementByClassName -- */
 
-const etiqueta = document.getElementsByClassName("caja")
-console.log(etiqueta);
+// const etiqueta = document.getElementsByClassName("caja")
+// console.log(etiqueta);
+
+/* -- querySelector -- */
+// const caja = document.querySelector("#contenedor1 .caja")
+// console.log(caja);
+
+/* -- querySelectorAll -- */
+// const caja = document.querySelectorAll("#contenedor1 .caja");
+// console.log(caja);
+// caja.forEach((caja) => console.log(caja));
+
+/* -- closest -- */
+// const ultimaCaja = document.querySelector("#contenedor2 .caja:last-child");
+// console.log(ultimaCaja);
+// console.log(ultimaCaja.closest(".contenedor-principal"));
+
+const contenedor2 = document.getElementById("contenedor2");
+console.log(contenedor2.querySelectorAll(".caja"));
