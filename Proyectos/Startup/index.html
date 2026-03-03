@@ -70,7 +70,7 @@
           <!-- Botones del hero -->
           <div class="botones">
             <!-- Botón para ver el demo -->
-            <button class="boton boton-transparente">
+            <button class="boton boton-transparente" id="btn-video">
               Ver demo
               <div class="icono">
                 <svg
@@ -150,15 +150,17 @@
               ></span>
               +de 50 países
             </p>
+
+            <!-- <button id="cambiar" class="boton">Cambiar slides</button> -->
           </div>
         </div>
 
         <!-- Columnna 2 del hero -->
         <div class="hero__col-2">
           <!-- Slideshow -->
-          <div class="slideshow">
+          <div class="slideshow" id="slideshow">
             <!-- Slides -->
-            <div class="slides">
+            <div class="slides" id="slides">
               <!-- Imagen del slide -->
               <div class="slide">
                 <img src="./assets/img/1.png" alt="" />
@@ -174,7 +176,7 @@
             </div>
 
             <!-- Indicadores -->
-            <div class="indicadores">
+            <div class="indicadores" id="indicadores">
               <!-- Botón de indicado -->
               <button class="indicador active"></button>
               <button class="indicador"></button>
@@ -184,7 +186,7 @@
         </div>
 
         <!-- Overlay | video -->
-        <div class="overlay-video">
+        <div class="overlay-video" id="overlay-video">
           <div class="video">
             <iframe
               src="https://www.youtube.com/embed/8W9GzGmSD2w?si=xPUoADGQA3gT2g2h"
@@ -217,16 +219,16 @@
           <!-- Grilla de dos columnas -->
           <div class="grid">
             <!-- Las imágenes -->
-            <div class="previews">
-              <img src="./assets/img/4.png" alt="" class="thumb active" />
-              <img src="./assets/img/5.png" alt="" class="thumb" />
-              <img src="./assets/img/6.png" alt="" class="thumb" />
-              <img src="./assets/img/7.png" alt="" class="thumb" />
+            <div class="previews" id="previews">
+              <img src="./assets/img/4.png" alt="" class="thumb active" data-id="1"/>
+              <img src="./assets/img/5.png" alt="" class="thumb" data-id="2"/>
+              <img src="./assets/img/6.png" alt="" class="thumb" data-id="3"/>
+              <img src="./assets/img/7.png" alt="" class="thumb" data-id="4"/>
             </div>
 
             <!-- tabs -->
-            <div class="tabs">
-              <div class="tab active">
+            <div class="tabs" id="tabs">
+              <div class="tab active" data-id="1">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +254,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="2">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +280,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="3">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +306,7 @@
                   </p>
                 </div>
               </div>
-              <div class="tab">
+              <div class="tab" data-id="4">
                 <div class="icono">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
