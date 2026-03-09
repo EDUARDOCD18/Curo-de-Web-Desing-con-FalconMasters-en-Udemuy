@@ -1,5 +1,7 @@
+import Header from "./components/Header";
+
 function App() {
-  const nombre = "Javier Eduardo";
+  // const nombre = "Javier Eduardo";
   //   const amigos = ["Brian", "David", "Robert", "Daniel"];
   //   const lista = [
   //     <li key="1">Brian</li>,
@@ -14,15 +16,11 @@ function App() {
     { nombre: "Robert", telefono: "123-011-189" },
     { nombre: "Daniel", telefono: "123-011-189" },
   ];
+
   return (
     /* -- Contenedor principal  -- */
     <div className="contenedor">
-      {/* -- header --  */}
-      <header className="header">
-        <h1>Hola mundo, soy {nombre}</h1>
-        <p> Hoy es {new Date().toLocaleDateString()}</p>
-      </header>
-
+      <Header nombre={"Javier"} />
       {/* -- sección para la lista */}
       <section className="lista">
         <h3 className="titulo">Contactos</h3>
