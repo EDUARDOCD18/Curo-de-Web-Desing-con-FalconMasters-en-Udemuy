@@ -21,7 +21,7 @@ function App() {
   ];
 
   // const sesionIniciada = true;
-  const [sesionIniciada, setSesionIniciada] = useState(true);
+  const [sesionIniciada, setSesionIniciada] = useState(false);
 
   const cerrarSesion = () => {
     setSesionIniciada(false);
