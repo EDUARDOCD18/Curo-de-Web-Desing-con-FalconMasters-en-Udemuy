@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Lista from "./components/lista";
 import LoginForm from "./components/login";
+import { useState } from "react";
 
 function App() {
   const nombre = "Javier";
@@ -19,7 +20,12 @@ function App() {
     { nombre: "Daniel", telefono: "123-011-189" },
   ];
 
-  const sesionIniciada = f;
+  // const sesionIniciada = true;
+  const [sesionIniciada, setSesionIniciada] = useState(true);
+
+  const cerrarSesion = () => {
+    setSesionIniciada(false);
+  };
 
   return (
     <>
@@ -28,10 +34,12 @@ function App() {
           <Header nombre={nombre} />
           <Lista contactos={amigos} />
           <Lista contactos={famosos} />
-          <button className="btnCerrarSesion">Cerrar la sesión</button>
+          <button className="btnCerrarSesion" onClick={cerrarSesion}>
+            Cerrar la sesión
+          </button>
         </div>
       ) : (
-        <LoginForm />
+        <LoginForm setSesionIniciada={setSesionIniciada}/>
       )}
     </>
   );
