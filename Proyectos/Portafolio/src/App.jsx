@@ -3,7 +3,9 @@ import Header from "./components/layout/Header";
 function App() {
   return (
     <>
-      <Header />
+      <div className="contenedor">
+        <Header />
+      </div>
     </>
   );
 }

@@ -1,0 +1,51 @@
+*html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  background: var(--shade-1);
+  color: var(--shade-9);
+}
+
+:root {
+  --shade-1: #f2f2f2;
+  --shade-2: #d9d9d9;
+  --shade-3: #bfbfbf;
+  --shade-4: #a6a6a6;
+  --shade-5: #8c8c8c;
+  --shade-6: #737373;
+  --shade-7: #595959;
+  --shade-8: #404040;
+  --shade-9: #0d0d0d;
+  --shade-10: #000000;
+  --primario: #d83a3a;
+}
+
+/* Estilos para los enlaces */
+a {
+  text-decoration: none;
+  color: var(--shade-8);
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
