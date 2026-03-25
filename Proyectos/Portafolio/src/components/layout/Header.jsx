@@ -1,4 +1,5 @@
-import "./Header.css"
+import "./Header.css";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
         </nav>
 
         {/* botón de datk-mode */}
-        <button>Dark mode</button>
+        <DarkModeSwitch />
       </header>
     </>
   );
