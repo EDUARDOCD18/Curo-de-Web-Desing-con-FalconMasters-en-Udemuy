@@ -1,13 +1,37 @@
 import "./DarkModeSwitch.css";
+import { useState, useEffect } from "react";
 
 const DarkModeSwitch = () => {
+  const estadoInicial = JSON.parse(localStorage.getItem("dark-mode") || false);
+  const [darkMode, setDarkMode] = useState(estadoInicial);
+
+  /* Comprobar si el Dark Mode está o no */
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+
+    localStorage.setItem("dark-mode", !darkMode); // guardar la preferencia de dark mode en local storage
+  };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
     <>
       <label className="dark-mode">
-        <input type="checkbox" name="dark-mode" id="dark-mode" />
+        <input
+          type="checkbox"
+          name="dark-mode"
+          id="dark-mode"
+          onChange={toggleDarkMode}
+        />
 
         {/* icono del sol */}
-        <span className="icono sol active">
+        <span className={`icono sol ${!darkMode ? "active" : ""}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -20,7 +44,7 @@ const DarkModeSwitch = () => {
         </span>
 
         {/* icono de la luna */}
-        <span className="icono luna">
+        <span className={`icono luna ${darkMode ? "active" : ""}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

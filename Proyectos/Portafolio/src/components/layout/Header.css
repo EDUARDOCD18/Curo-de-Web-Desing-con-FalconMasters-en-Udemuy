@@ -16,12 +16,20 @@
       font-size: 3.4rem;
       font-family: "Merriweather", serif;
       color: var(--shade-8);
+
+      .dark &{
+        color: var(--shade-1);
+      }
     }
 
     .subtitulo {
       font-size: 1.6rem;
       color: var(--primario);
       font-weight: 500;
+
+      .dark &{
+        color: var(--primario);
+      }
     }
   }
 
