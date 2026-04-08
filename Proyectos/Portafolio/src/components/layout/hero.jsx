@@ -6,7 +6,7 @@ const Hero = () => {
       <section className="hero">
         <div className="contenido">
           <h3 className="titulo">
-            <span>Hola! </span>Soy Javier Eduardo
+            <span>Hola!</span>Soy Javier Eduardo
           </h3>
 
           <p className="subtitulo">
@@ -51,9 +51,9 @@ const Hero = () => {
           </div>
         </div>
 
-       {/*  <div className="video-container">
+        <div className="video-container">
           <video src="./assets/background.mp4" loop autoPlay className="video" type="video/mp4"></video>
-        </div> */}
+        </div>
       </section>
     </>
   );
