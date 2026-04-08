@@ -1,10 +1,12 @@
+import "./Hero.css"
+
 const Hero = () => {
   return (
     <>
       <section className="hero">
         <div className="contenido">
           <h3 className="titulo">
-            <span>Hola!</span>Soy Javier Eduardo
+            <span>Hola! </span>Soy Javier Eduardo
           </h3>
 
           <p className="subtitulo">
@@ -31,7 +33,7 @@ const Hero = () => {
               </div>
             </a>
 
-            <a href="#contacto" className="boton transparente">
+            <a href="#contacto" className="boton">
               Contácta conmigo
               <div className="icono">
                 <svg
@@ -48,6 +50,10 @@ const Hero = () => {
             </a>
           </div>
         </div>
+
+       {/*  <div className="video-container">
+          <video src="./assets/background.mp4" loop autoPlay className="video" type="video/mp4"></video>
+        </div> */}
       </section>
     </>
   );
