@@ -1,3 +1,5 @@
+import "./Clientes.css"
+
 const Clientes = () => {
   return (
     <>

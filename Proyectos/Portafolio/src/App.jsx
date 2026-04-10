@@ -1,6 +1,6 @@
 import Header from "./components/layout/Header";
 import Hero from "./components/layout/hero";
-import Clientes from "./components/Clientes";
+import Clientes from "./components/layout/Clientes";
 
 function App() {
   return (
