@@ -1,3 +1,5 @@
+import "./Trabajos.css"
+
 const Trabajos = () => {
   return (
     <>

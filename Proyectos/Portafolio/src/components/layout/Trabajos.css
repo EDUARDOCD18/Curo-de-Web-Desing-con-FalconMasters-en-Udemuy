@@ -1,0 +1,35 @@
+.trabajos{
+    .filtros{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        label{
+            display: flex;
+        }
+
+        .opcion{
+            padding: 10px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+            border: 1px solid var(--shade-3);
+            color: var(--shade-5);
+        }
+
+        input[type="radio"]{
+            display: none;
+            &:checked+.opcion{
+                background: var(--primario);
+                color: white;
+                border: 1px solid transparent;
+            }
+        }
+
+        @media (max-width: 992px){
+            &{
+                gap: 5px;
+            }
+        }
+    }
+}
