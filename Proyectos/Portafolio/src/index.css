@@ -90,7 +90,6 @@ a {
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  text-align: center;
   padding: 60px 20px;
 
   .encabezado {
