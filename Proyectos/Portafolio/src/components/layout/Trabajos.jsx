@@ -1,4 +1,5 @@
-import "./Trabajos.css"
+import "./Trabajos.css";
+import trabajos from "../data/trabajos";
 
 const Trabajos = () => {
   return (
@@ -35,216 +36,44 @@ const Trabajos = () => {
 
         {/* grilla para los trabajos */}
         <div className="grid">
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
-
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
+          {trabajos.map((trabajo, index) => {
+            return (
+              <div className="trabajo" key={trabajo.id}>
+                <a href="#" className="thumb">
+                  <img
+                    loading="lazy"
+                    src={trabajo.thumb.url}
+                    alt={trabajo.thumb.alt}
+                  />
                 </a>
-                <p className="categoria">Diseño Web</p>
-              </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
 
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
-                </a>
-                <p className="categoria">Diseño Web</p>
+                <div className="info">
+                  <div className="textos">
+                    <a href="#" className="nombre">
+                      {trabajo.info.nombre}
+                    </a>
+                    <p className="categoria">{trabajo.info.categoria}</p>
+                  </div>
+                  <a href="#" className="btn-ir">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
-
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
-                </a>
-                <p className="categoria">Diseño Web</p>
-              </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
-
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
-                </a>
-                <p className="categoria">Diseño Web</p>
-              </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
-
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
-                </a>
-                <p className="categoria">Diseño Web</p>
-              </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="trabajo">
-            <a href="#" className="thumb">
-              <img
-                loading="lazy"
-                src="./assets/trabajos/diseño-1.png"
-                alt="Trabajo de diseño web"
-                srcset=""
-              />
-            </a>
-
-            <div className="info">
-              <div className="textos">
-                <a href="#" className="nombre">
-                  Trabajo 1
-                </a>
-                <p className="categoria">Diseño Web</p>
-              </div>
-              <a href="#" className="btn-ir">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
     </>
