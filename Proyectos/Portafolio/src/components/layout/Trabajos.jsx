@@ -1,6 +1,7 @@
 import "./Trabajos.css";
 import { useState } from "react";
 import trabajos from "../data/trabajos";
+import Modal from "../Modal";
 
 const Trabajos = () => {
   const [categoriaSelecionada, setCategoriaSeleccionada] = useState("todos");
@@ -127,6 +128,9 @@ const Trabajos = () => {
           })}
         </div>
       </section>
+
+      {/* Modal */}
+      <Modal />
     </>
   );
 };
