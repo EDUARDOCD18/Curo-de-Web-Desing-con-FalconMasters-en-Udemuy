@@ -1,7 +1,7 @@
 const trabajos = [
   {
     id: 1,
-    categoria: "diseño-web",
+    categoria: "diseno-web",
     thumb: {
       url: "./assets/trabajos/diseño-1.png",
       alt: "Trabajo 1",
@@ -161,7 +161,7 @@ const trabajos = [
   },
   {
     id: 5,
-    categoria: "diseño-web",
+    categoria: "diseno-web",
     thumb: {
       url: "./assets/trabajos/diseño-2.png",
       alt: "Trabajo 5",
@@ -321,7 +321,7 @@ const trabajos = [
   },
   {
     id: 9,
-    categoria: "diseño-web",
+    categoria: "diseno-web",
     thumb: {
       url: "./assets/trabajos/diseño-3.png",
       alt: "Trabajo 9",

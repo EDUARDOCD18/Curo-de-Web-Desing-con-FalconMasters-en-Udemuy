@@ -1,7 +1,28 @@
 import "./Trabajos.css";
+import { useState } from "react";
 import trabajos from "../data/trabajos";
 
 const Trabajos = () => {
+  const [categoriaSelecionada, setCategoriaSeleccionada] = useState("todos");
+  const [trabajosFiltrados, setTrabajosFiltrados] = useState(trabajos);
+
+  const hadleChange = (e) => {
+    const categoria = e.target.id;
+    setCategoriaSeleccionada(categoria);
+
+    /* Función para aplicar los filtros */
+    if (categoria === "todos") {
+      setTrabajosFiltrados(trabajos);
+    } else {
+      const nuevosTrabajos = trabajos.filter((trabajo) => {
+        if (trabajo.categoria === categoria) {
+          return true;
+        }
+      });
+      setTrabajosFiltrados(nuevosTrabajos);
+    }
+  };
+
   return (
     <>
       <section id="trabajos" className="trabajos">
@@ -13,30 +34,60 @@ const Trabajos = () => {
         {/* Filtros */}
         <div className="filtros">
           <label htmlFor="todos">
-            <input type="radio" name="categoria" id="todos" />
+            <input
+              type="radio"
+              name="categoria"
+              id="todos"
+              onChange={hadleChange}
+              checked={categoriaSelecionada === "todos"}
+            />
             <span className="opcion">Todos</span>
           </label>
           <label htmlFor="diseno-web">
-            <input type="radio" name="categoria" id="diseno-web" />
+            <input
+              type="radio"
+              name="categoria"
+              id="diseno-web"
+              onChange={hadleChange}
+              checked={categoriaSelecionada === "diseno-web"}
+            />
             <span className="opcion">Diseño Web</span>
           </label>
           <label htmlFor="desarrollo-web">
-            <input type="radio" name="categoria" id="desarrollo-web" />
+            <input
+              type="radio"
+              name="categoria"
+              id="desarrollo-web"
+              onChange={hadleChange}
+              checked={categoriaSelecionada === "desarrollo-web"}
+            />
             <span className="opcion">Desarrollo Web</span>
           </label>
           <label htmlFor="aplicaciones-moviles">
-            <input type="radio" name="categoria" id="aplicaciones-moviles" />
+            <input
+              type="radio"
+              name="categoria"
+              id="aplicaciones-moviles"
+              onChange={hadleChange}
+              checked={categoriaSelecionada === "aplicaciones-moviles"}
+            />
             <span className="opcion">Aplicaciones Móviles</span>
           </label>
           <label htmlFor="desarrollo-software">
-            <input type="radio" name="categoria" id="desarrollo-software" />
+            <input
+              type="radio"
+              name="categoria"
+              id="desarrollo-software"
+              onChange={hadleChange}
+              checked={categoriaSelecionada === "desarrollo-software"}
+            />
             <span className="opcion">Desarrollo de Software</span>
           </label>
         </div>
 
         {/* grilla para los trabajos */}
         <div className="grid">
-          {trabajos.map((trabajo, index) => {
+          {trabajosFiltrados.map((trabajo, index) => {
             return (
               <div className="trabajo" key={trabajo.id}>
                 <a href="#" className="thumb">
