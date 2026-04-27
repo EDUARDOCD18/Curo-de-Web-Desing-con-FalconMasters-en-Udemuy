@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  &.active{
+  &.active {
     display: flex;
   }
 
@@ -19,7 +19,6 @@
     max-width: 1200px;
     height: 90%;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
 
@@ -70,10 +69,18 @@
           .titulo {
             margin-bottom: 10px;
             color: var(--shade-10);
+
+            .dark & {
+              color: var(--shade-1);
+            }
           }
 
           .categoria {
             color: var(--shade-4);
+          }
+
+          .dark & {
+            background: var(--shade-9);
           }
         }
 
@@ -85,6 +92,11 @@
           color: var(--shade-8);
           line-height: 30px;
 
+          .dark & {
+            background: var(--shade-9);
+            color: var(--shade-4);
+          }
+
           p {
             margin-bottom: 20px;
           }
@@ -93,6 +105,17 @@
             width: 50%;
           }
         }
+      }
+    }
+
+    /* Diseño responsivo para pantallas inferiores a 768 px */
+    @media (max-width: 768px){
+      &{
+        width: 80vw;
+        max-width: 400px;
+        overflow: scroll;
+
+        .grid{grid-template-columns: 1fr;}
       }
     }
   }
