@@ -6,6 +6,8 @@ import Modal from "../Modal";
 const Trabajos = () => {
   const [categoriaSelecionada, setCategoriaSeleccionada] = useState("todos");
   const [trabajosFiltrados, setTrabajosFiltrados] = useState(trabajos);
+  const [estadoModal, setEstadoModal] = useState(false);
+  const [trabajoSeleccionado, setTrabajoSeleccionado] = useState(trabajos[0]);
 
   const hadleChange = (e) => {
     const categoria = e.target.id;
@@ -22,6 +24,27 @@ const Trabajos = () => {
       });
       setTrabajosFiltrados(nuevosTrabajos);
     }
+  };
+
+  /* -- Funciones para abrir y cerrar el modal -- */
+  const openModal = (e, id) => {
+    // Función que abre el modal
+    e.preventDefault();
+    setEstadoModal(true);
+
+    const trabajo = trabajos.find((trabajo) => {
+      if (trabajo.id === id) {
+        return true;
+      }
+    });
+
+    // console.log(trabajo)
+    setTrabajoSeleccionado(trabajo);
+  };
+
+  const closeModal = () => {
+    // Función que cierra el modal
+    setEstadoModal(false);
   };
 
   return (
@@ -91,7 +114,11 @@ const Trabajos = () => {
           {trabajosFiltrados.map((trabajo, index) => {
             return (
               <div className="trabajo" key={trabajo.id}>
-                <a href="#" className="thumb">
+                <a
+                  href="#"
+                  className="thumb"
+                  onClick={(e) => openModal(e, trabajo.id)}
+                >
                   <img
                     loading="lazy"
                     src={trabajo.thumb.url}
@@ -101,12 +128,12 @@ const Trabajos = () => {
 
                 <div className="info">
                   <div className="textos">
-                    <a href="#" className="nombre">
+                    <a href="#" className="nombre" onClick={(e) => openModal(e, trabajo.id)}>
                       {trabajo.info.nombre}
                     </a>
                     <p className="categoria">{trabajo.info.categoria}</p>
                   </div>
-                  <a href="#" className="btn-ir">
+                  <a href="#" className="btn-ir" onClick={(e) => openModal(e, trabajo.id)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -129,8 +156,12 @@ const Trabajos = () => {
         </div>
       </section>
 
-      {/* Modal */}
-      <Modal />
+      {/* -- Modal -- */}
+
+      {/* - Condicional que evalua el estado del modal -*/}
+      {estadoModal && (
+        <Modal closeModal={closeModal} trabajo={trabajoSeleccionado} />
+      )}
     </>
   );
 };
