@@ -3,6 +3,7 @@ import Hero from "./components/layout/hero";
 import Clientes from "./components/layout/Clientes";
 import Trabajos from "./components/layout/Trabajos";
 import AcercaDe from "./components/layout/AcercaDe";
+import Contacto from "./components/layout/Contacto";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Clientes />
         <Trabajos />
         <AcercaDe />
+        <Contacto />
       </div>
     </>
   );
