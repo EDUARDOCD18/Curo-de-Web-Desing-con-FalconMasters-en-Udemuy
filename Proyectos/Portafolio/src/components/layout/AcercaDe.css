@@ -1,0 +1,49 @@
+/* --- Estilos para la sección de "Acerca De" --- */
+
+.acerca-de {
+  display: flex;
+  justify-content: center;
+
+  /* -- grilla de la sección -- */
+  .grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1.7fr 2fr;
+    gap: clamp(20px, 3vw, 40px);
+
+    /* -- columna de las fotos -- */
+    .col-1 {
+      /* -- el contenedor de fotos -- */
+      .fotos {
+        display: flex;
+        justify-content: flex-end;
+        position: sticky;
+        top: 20px;
+
+        /* -- foto -- */
+        .foto {
+          padding: 6px;
+          border-radius: 10px;
+          border: solid 1px var(--shade-2);
+
+          .dark & { 
+            /* borde de las fotos al estar en modo oscuro */
+            border: solid 1px var(--shade-8);
+          }
+
+          /* - foto 1 - */
+          &:nth-child(1) {
+            width: 80%;
+          }
+          /* - foto 2 - */
+          &:nth-child(2) {
+            width: 40%;
+            position: absolute;
+            left: 0;
+            bottom: -15%;
+          }
+        }
+      }
+    }
+  }
+}

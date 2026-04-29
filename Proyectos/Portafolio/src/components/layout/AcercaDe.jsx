@@ -1,3 +1,5 @@
+import "./AcercaDe.css"
+
 const AcercaDe = () => {
   return (
     <>
