@@ -1,3 +1,5 @@
+import "./Contacto.css"
+
 const Contacto = () => {
   return (
     <>
@@ -34,7 +36,7 @@ const Contacto = () => {
             />
           </div>
           {/* - Mensaje de la persona -- */}
-          <div className="grupo-formulario">
+          <div className="grupo-formulario mensaje">
             <label htmlFor="correo">Mensaje</label>
             <textarea
               name="mensaje"
@@ -45,12 +47,12 @@ const Contacto = () => {
           </div>
 
           {/* - Mensaje de error */}
-          <div className="grupo-formulario">
+          <div className="grupo-formulario error">
             <p>Error: información inválida</p>
           </div>
 
           {/* - Botón para enviar el formulario - */}
-          <div className="grupo-formulario">
+          <div className="grupo-formulario enviar">
             <div>
               <button className="boton">
                 Enviar mensaje
