@@ -1,6 +1,23 @@
-import "./Contacto.css"
+import "./Contacto.css";
+import { useState } from "react";
 
 const Contacto = () => {
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  const handleInput = (e, input) => {
+    if (input === "nombre") {
+      setNombre(e.target.value);
+    }
+    if (input === "correo") {
+      setCorreo(e.target.value);
+    }
+    if (input === "mensaje") {
+      setMensaje(e.target.value);
+    }
+  };
+
   return (
     <>
       <section className="contacto" id="contacto">
@@ -21,6 +38,8 @@ const Contacto = () => {
               name="nombre"
               id="nombre"
               placeholder="John Doe"
+              value={nombre}
+              onChange={(e) => handleInput(e, "nombre")}
               required
             />
           </div>
@@ -32,6 +51,8 @@ const Contacto = () => {
               name="correo"
               id="correo"
               placeholder="correo@correo.com"
+              value={correo}
+              onChange={(e) => handleInput(e, "correo")}
               required
             />
           </div>
@@ -42,6 +63,8 @@ const Contacto = () => {
               name="mensaje"
               id="mensaje"
               placeholder="Redacta acá tu mensaje."
+              value={mensaje}
+              onChange={(e) => handleInput(e, "mensaje")}
               required
             ></textarea>
           </div>
