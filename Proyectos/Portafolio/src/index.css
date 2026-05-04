@@ -86,7 +86,8 @@ a {
 
 .clientes,
 .trabajos,
-.contacto {
+.contacto,
+.footer {
   display: flex;
   flex-direction: column;
   gap: 40px;
