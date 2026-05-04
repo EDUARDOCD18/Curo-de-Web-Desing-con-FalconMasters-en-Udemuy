@@ -5,6 +5,13 @@ const Contacto = () => {
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const [error, setError] = useState(null);
+
+  const regEx = {
+    nombre: /^[a-zA-Z\s-]{2,}$/,
+    correo: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    mensaje: /^.{1,}$/,
+  };
 
   const handleInput = (e, input) => {
     if (input === "nombre") {
@@ -15,6 +22,40 @@ const Contacto = () => {
     }
     if (input === "mensaje") {
       setMensaje(e.target.value);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    /* - se ejecuta antes de enviar el formulario - */
+    e.preventDefault();
+
+    const nombreValido = regEx.nombre.test(nombre);
+    const correoValido = regEx.correo.test(correo);
+    const mensajeValido = regEx.mensaje.test(mensaje);
+
+    /* Envalúa que el nombre esté correcto */
+    if (!nombreValido) {
+      setError("Por Favor, ingresa un nombre válido");
+      return;
+    }
+
+    /* Envalúa que el correo esté correcto */
+    if (!correoValido) {
+      setError("Por Favor, ingresa un correo válido");
+      return;
+    }
+
+    /* Envalúa que el mensaje esté correcto */
+    if (!mensajeValido) {
+      setError("Por Favor, ingresa un mensaje válido");
+      return;
+    }
+
+    if (nombreValido && correoValido && mensajeValido) {
+      setError(null);
+
+      /* - Envía el formulario - */
+      e.target.submit();
     }
   };
 
@@ -29,7 +70,12 @@ const Contacto = () => {
         </div>
 
         {/* -- Formulario de contacto */}
-        <form action="" className="formulario">
+        <form
+          action="https://formspree.io/f/mrejpoog"
+          className="formulario"
+          method="post"
+          onSubmit={handleSubmit}
+        >
           {/* - Nombre de la persona -- */}
           <div className="grupo-formulario">
             <label htmlFor="nombre">Nombre</label>
@@ -40,7 +86,6 @@ const Contacto = () => {
               placeholder="John Doe"
               value={nombre}
               onChange={(e) => handleInput(e, "nombre")}
-              required
             />
           </div>
           {/* - Correo de la persona -- */}
@@ -53,7 +98,6 @@ const Contacto = () => {
               placeholder="correo@correo.com"
               value={correo}
               onChange={(e) => handleInput(e, "correo")}
-              required
             />
           </div>
           {/* - Mensaje de la persona -- */}
@@ -65,19 +109,20 @@ const Contacto = () => {
               placeholder="Redacta acá tu mensaje."
               value={mensaje}
               onChange={(e) => handleInput(e, "mensaje")}
-              required
             ></textarea>
           </div>
 
           {/* - Mensaje de error */}
-          <div className="grupo-formulario error">
-            <p>Error: información inválida</p>
-          </div>
+          {error && (
+            <div className="grupo-formulario error">
+              <p>{error}</p>
+            </div>
+          )}
 
           {/* - Botón para enviar el formulario - */}
           <div className="grupo-formulario enviar">
             <div>
-              <button className="boton">
+              <button type="submit" className="boton">
                 Enviar mensaje
                 <div className="icono">
                   <svg
