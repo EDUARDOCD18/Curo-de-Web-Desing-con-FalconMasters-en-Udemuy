@@ -244,6 +244,15 @@
   }
 }
 @layer utilities {
+  .order-4 {
+    order: 4;
+  }
+  .order-first {
+    order: -9999;
+  }
+  .order-last {
+    order: 9999;
+  }
   .m-4 {
     margin: calc(var(--spacing) * 4);
   }
@@ -406,8 +415,14 @@
   .resize {
     resize: both;
   }
+  .flex-nowrap {
+    flex-wrap: nowrap;
+  }
   .flex-wrap {
     flex-wrap: wrap;
+  }
+  .flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
   }
   .justify-between {
     justify-content: space-between;
