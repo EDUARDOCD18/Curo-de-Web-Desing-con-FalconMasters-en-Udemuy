@@ -484,6 +484,18 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .self-center {
+    align-self: center;
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .self-start {
+    align-self: flex-start;
+  }
+  .self-stretch {
+    align-self: stretch;
+  }
   .overflow-y-auto {
     overflow-y: auto;
   }
