@@ -13,4 +13,6 @@
   /* Colores */
   --color-primary: #644545;
   --color-background: #ece2e2;
+
+  --background-image-hero: url("/img/background.png")
 }
