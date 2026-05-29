@@ -10,20 +10,49 @@
   <body class="bg-background">
     <!-- HEADER -->
     <header
-      class="text-white relative bg-hero bg-cover bg-center pt-10 before:content-[''] before:bg-red-950/70 before:w-full before:h-full before:block before:absolute before:z-0 before:top-0"
+      class="text-white overflow-auto relative bg-hero bg-cover bg-center pt-10 before:content-[''] before:bg-red-950/70 before:w-full before:h-full before:block before:absolute before:z-0 before:top-0"
     >
       <!-- Barra de logo y menú -->
       <div class="relative z-10 w-11/12 mx-auto max-w-7xl">
+        <!-- Logo y menú -->
         <div class="flex flex-wrap items-center justify-between gap-7">
-          <h3 class="font-title text-4xl font-semibold">Javizzería & delicious food</h3>
+          <!-- Título del logo -->
+          <h3 class="font-title text-4xl font-semibold">
+            Javizzería & delicious food
+          </h3>
 
           <!-- menú de navegación -->
-          <nav class="flex flex-wrap items-center justify-center gap-7 text-nowrap text-center font-semibold uppercase">
+          <nav
+            class="flex flex-wrap items-center justify-center gap-7 text-nowrap text-center font-semibold uppercase"
+          >
             <a href="menu.html" class="hover:underline">Menú</a>
-            <a href="index.html#sucursales" class="hover:underline">Sucursales</a>
+            <a href="index.html#sucursales" class="hover:underline"
+              >Sucursales</a
+            >
             <a href="index.html#acerca-de" class="hover:underline">Acerca de</a>
             <a href="#" class="hover:underline">Contacto</a>
           </nav>
+        </div>
+
+        <!-- Contenedor de los textos -->
+        <div class="my-24 text-center">
+          <p class="mb-4 font-bold uppercase">Pizzería</p>
+          <h1 class="mb-4 font-title text-8xl">Ambiente familiar</h1>
+          <p class="font-title text-3xl">- Since 2027 -</p>
+
+          <!-- Botones -->
+          <div class="mt-10 flex justify-center gap-5 uppercase">
+            <a
+              href="menu.html"
+              class="border border-white/20 px-4 py-2 transition-all hover:border-white"
+              >Menú</a
+            >
+            <a
+              href="#"
+              class="border border-white/20 px-4 py-2 transition-all hover:border-white"
+              >Contacto</a
+            >
+          </div>
         </div>
       </div>
     </header>
