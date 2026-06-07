@@ -347,7 +347,7 @@
           <!-- Grid -->
           <div class="flex flex-col gap-5">
             <!-- Sucursal 1-->
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-3 gap-0 md:gap-5">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1962.3279425922092!2d-66.98738106710431!3d10.369375037268265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2af35a7b0451f7%3A0xbb77fc2895121134!2sMulticentro%20Empresarial%20Coliseo!5e0!3m2!1ses!2sve!4v1780498881817!5m2!1ses!2sve"
                 width="600"
@@ -356,10 +356,10 @@
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                class="h-full w-full col-span-2"
+                class="h-full w-full col-span-full md:col-span-2 aspect-video md:aspect-auto"
               ></iframe>
               <div
-                class="col-span-1 flex flex-col gap-5 p-5 text-white bg-primary"
+                class="col-span-full md:col-span-1 flex flex-col gap-5 p-5 text-white bg-primary"
               >
                 <p class="text-2xl">Carrizal, Miranda</p>
                 <p class="italic">
@@ -401,9 +401,9 @@
             </div>
 
             <!-- Sucursal 2-->
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-3 gap-0 md:gap-5">
               <div
-                class="col-span-1 flex flex-col gap-5 p-5 text-white bg-primary"
+                class="col-span-full md:col-span-1 flex flex-col gap-5 p-5 text-white bg-primary order-2 md:order-1"
               >
                 <p class="text-2xl">Carrizal, Miranda</p>
                 <p class="italic">
@@ -450,12 +450,17 @@
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                class="h-full w-full col-span-2"
+                class="h-full w-full col-span-full md:col-span-2 aspect-video md:aspect-auto order-1 md:order-2"
               ></iframe>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary p-3 text-center text-sm text-white">
+      <p>© 2026 Javizzería by Javier Eduardo | Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>
