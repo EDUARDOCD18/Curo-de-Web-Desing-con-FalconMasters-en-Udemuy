@@ -2,6 +2,8 @@
   --primario: #174dd9;
   --sombra-card: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --fondo-primario: #f2f2f2;
+  --fondo-negro: #000;
+  --color-blanco: #fff;
 }
 
 html {
@@ -36,4 +38,50 @@ a {
 
 img {
   vertical-align: top;
+}
+
+/* ================================
+        ESTILOS PARA EL HEADER
+   ================================ */
+
+.header {
+  background: var(--fondo-negro);
+  color: var(--color-blanco);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin-bottom: 4rem;
+
+  /* -- Logo del header -- */
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* -- Imagen del logo -- */
+    img {
+      width: 10vw;
+      min-width: 150px;
+    }
+  }
+
+  /* -- navbar -- */
+  .navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      color: var(--color-blanco);
+      padding: 10px 15px;
+      display: block;
+      transition: 0.2s ease background;
+
+      &:hover {
+        background: var(--primario);
+        text-decoration: none;
+      }
+    }
+  }
 }
