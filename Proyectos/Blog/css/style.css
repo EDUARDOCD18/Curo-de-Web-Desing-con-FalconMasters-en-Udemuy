@@ -111,14 +111,49 @@ img {
     }
   }
 
-  @media (max-width: 576px){
-    &{
+  /* -- Menos de 576px en pantalla -- */
+  @media (max-width: 576px) {
+    & {
+      /* -- logo -- */
       .logo {
         justify-content: space-between;
         padding: 1rem;
 
-        .btn-menu{
+        /* -- Menú de hamburgesa -- */
+        .btn-menu {
           display: flex;
+        }
+      }
+    }
+
+    /* -- Contenedor navbar -- */
+    .contenedor-navbar {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+
+      &.active{
+        display: block;
+      }
+
+      /* -- navbar -- */
+      .navbar {
+        background: #000;
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-top: 6rem;
+
+        /* -- Enlaces del navbar -- */
+        a {
+          padding: 20px;
         }
       }
     }
