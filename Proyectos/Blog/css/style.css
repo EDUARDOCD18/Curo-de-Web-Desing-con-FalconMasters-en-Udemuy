@@ -137,7 +137,7 @@ img {
       left: 0;
       z-index: 10;
 
-      &.active{
+      &.active {
         display: block;
       }
 
@@ -150,7 +150,6 @@ img {
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding-top: 6rem;
-
         /* -- Enlaces del navbar -- */
         a {
           padding: 20px;
