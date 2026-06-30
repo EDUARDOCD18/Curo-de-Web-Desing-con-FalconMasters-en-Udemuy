@@ -52,7 +52,6 @@ img {
 /* ================================
         ESTILOS PARA EL HEADER
    ================================ */
-
 .header {
   background: var(--fondo-negro);
   color: var(--color-blanco);
@@ -162,6 +161,87 @@ img {
         /* -- Enlaces del navbar -- */
         a {
           padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* ================================
+        ESTILOS PARA EL MAIN
+   ================================ */
+.main {
+  /* -- Noticias principales -- */
+  .noticias-principales {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    img {
+      width: 100%;
+    }
+
+    .principal {
+      position: relative;
+
+      .thumb {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(105%);
+          transition: 0.3s ease all;
+        }
+      }
+
+      &:hover img {
+        transform: scale(100%);
+      }
+
+      .info {
+        background: #fff;
+        box-shadow: var(--sombra-card);
+        padding: 20px;
+        position: absolute;
+        bottom: 40px;
+        left: -40px;
+        width: 70%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .titulo {
+          font-size: 26px;
+          line-height: 140%;
+          color: black;
+        }
+
+        .meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          font-size: 14px;
+
+          .categoria {
+            font-weight: 600;
+          }
+
+          .fecha {
+            color: #13133c;
+          }
+        }
+
+        .extracto {
+          color: #0a0a0a;
+          line-height: 24px;
+          font-size: 14px;
         }
       }
     }
