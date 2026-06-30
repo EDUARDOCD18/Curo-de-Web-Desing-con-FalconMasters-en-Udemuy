@@ -41,6 +41,15 @@ img {
 }
 
 /* ================================
+      ESTILOS PARA EL CONTENEDOR
+   ================================ */
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================================
         ESTILOS PARA EL HEADER
    ================================ */
 
