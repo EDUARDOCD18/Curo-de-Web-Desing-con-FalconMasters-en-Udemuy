@@ -28,6 +28,11 @@ body {
   height: 100vh;
 }
 
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Playfair Display";
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
 
@@ -47,6 +52,70 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* ================================
+          COMPONENTE CARD
+   ================================ */
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 60%;
+  color: #000;
+  box-shadow: var(--sombra-card);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .thumb {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(105%);
+      transition: 0.3s ease all;
+    }
+
+    &:hover img {
+      transform: scale(100%);
+    }
+  }
+
+  .info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .titulo {
+      line-height: 22px;
+      font-size: 20px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+
+      .categoria {
+        font-weight: 600;
+        font-size: 14px;
+        color: #174dd9;
+      }
+
+      .fecha {
+        font-size: 14px;
+        color: #3c3c3c;
+      }
+    }
+  }
 }
 
 /* ================================
@@ -244,6 +313,17 @@ img {
           font-size: 14px;
         }
       }
+    }
+  }
+
+  /* -- Noticias destacadas -- */
+  .noticias-destacadas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    .card .info .titulo {
+      font-size: 16px;
     }
   }
 }
