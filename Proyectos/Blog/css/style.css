@@ -116,6 +116,13 @@ img {
       }
     }
   }
+
+  /* -- Card al tener menos de 768px -- */
+  @media (max-width: 768px){
+    &{
+      grid-template-columns: auto 75%;
+    }
+  }
 }
 
 /* ================================
@@ -314,16 +321,59 @@ img {
         }
       }
     }
-  }
 
-  /* -- Noticias destacadas -- */
-  .noticias-destacadas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+    /* -- Noticias destacadas -- */
+    .noticias-destacadas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
 
-    .card .info .titulo {
-      font-size: 16px;
+      /* -- Noticias destacadas al tener menos de 992px y más de 768px -- */
+      @media (max-width: 992px) {
+        & {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* -- Noticias destacadas al tener menos de 768px -- */
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .card .info .titulo {
+        font-size: 16px;
+      }
+    }
+
+    /* -- Diseño resposivo para las noticias principales -- */
+    @media (max-width: 992px) {
+      & {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      & {
+        display: flex;
+        flex-direction: column;
+
+        .principal {
+          background: #fff;
+          border-radius: 10px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          .info {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: none;
+          }
+        }
+      }
     }
   }
 }
