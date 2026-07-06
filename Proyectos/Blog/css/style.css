@@ -458,3 +458,80 @@ img {
     }
   }
 }
+
+/* ================================
+        ESTILOS PARA EL ASIDE
+   ================================ */
+.sidebar {
+  .widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      color: #3c3c3c;
+      line-height: 160%;
+      font-size: 14px;
+    }
+
+    .redes-sociales {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .redes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          background: #000;
+          color: white;
+          padding: 10px;
+          border-radius: 3px;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &.x {
+            background: #1da1f2;
+          }
+          &.youtube {
+            background: #ff0000;
+          }
+          &.instagram {
+            background: #c13584;
+          }
+          &.tiktok {
+            background: #0a0a0af6;
+          }
+        }
+      }
+    }
+
+    .publicidad {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        max-width: 350px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+
+      .anuncio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+}
