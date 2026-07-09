@@ -642,24 +642,23 @@ img {
       .widgets {
         grid-template-columns: repeat(2, 1fr);
 
-        .logo{
+        .logo {
           order: 1;
         }
 
-        .redes-sociales{
+        .redes-sociales {
           order: 2;
         }
       }
     }
   }
 
-  @media (max-width: 576px){
-    .widgets{
+  @media (max-width: 576px) {
+    .widgets {
       grid-template-columns: 1fr;
 
-      .enlaces{
-        ul{
-          
+      .enlaces {
+        ul {
           align-items: center;
         }
       }
